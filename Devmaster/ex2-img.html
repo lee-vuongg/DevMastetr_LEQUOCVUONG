@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thẻ hiển thị hình ảnh</title>
+</head>
+<body>
+    <h1>Thẻ hiển thị hình ảnh</h1>
+    <hr>
+    <pre>
+        - Sử dụng thẻ img để hiển thị hình ảnh
+        - img: Các thuộc tính thường dùng
+            + src = url (nguồn, tài nguyên ảnh)
+                    ++ url: Có 2 loại cơ bản (đường dẫn tuyệt đối/ tương đối)
+                        +++ url tuyệt đối:
+                            [giao thức]: //domain/path
+                            vd: https://devmaster.edu.vn/images/logo.png
+                        +++ url tương đối: (tài nguyên tring ứng dụng site)
+                            [pathFolder]/[file]
+                            ../[pathFolder]/file
+                            vd: 
+                            images/logo.png
+                            ../abc.jpg
+            + alt: nội dung văn bản miêu tả
+    </pre>
+    <hr>
+    <h2>Sử dụng đường dẫn tuyệt đối</h2>
+    <img src="https://thumbs.dreamstime.com/b/stunning-landscape-iamge-river-flowing-lush-green-forest-summer-61977208.jpg" alt="image1">
+    <hr>
+    <h2>Đường dẫn tương đối</h2>
+    <img src="images/images.jpg" alt="image2">
+    <hr>
+    <h2>Sử dụng ảnh ngoài thư mục</h2>
+    <img src="images/suc-hap-dan-dac-biet-cua-chu-meo-duong-pho-tro-thanh-hien-tuong-toan-cau-bob-meo-duong-pho-06-eva-vn-1485790275-width500height375.jpg" alt="image3">
+    <h2>Sử dụng ảnh cùng thư mục</h2>
+    <img src="./image4.jpg" alt="image4">
+</body>
+</html>
