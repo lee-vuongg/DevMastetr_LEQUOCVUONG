@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From</title>
+</head>
+<style>
+    form{
+        padding: 20px;
+        height: 400px;
+        border-radius: 20px;
+        background-color: rgb(187, 187, 243);
+        gap: 20px;
+    }
+</style>
+<body>
+    <form align="center"  action="" method="post" enctype="multipart/form-data">
+        <!--Text-->
+        <label for="user">User Name: </label>
+        <input type="text " name="user" id="user" placeholder="Nhập UserName">
+        <br>
+        <!--Pas-->
+        <label  for="Password">Passwword :</label>
+        <input type="Password" name="Password" id="Password" placeholder="Nhâp mât Khẩu">
+
+        <input type="hidden" name="id" id="id">
+        <!--Check-->
+        <br>
+        <input type="checkbox" name="Sở Thích" id="BongDa">
+        <Label for="BongDa">BongDa</Label>
+        <input type="checkbox" name="Sở Thích" id="CauLong">
+        <Label for="CauLong">CauLong</Label>
+        <!--radio-->
+        <br>
+        <input type="radio" name="GioiTinh" id="Nam">
+        <Label for="Nam">Nam</Label>
+        <input type="radio" name="GioiTinh" id="Nu">
+        <Label for="Nu">Nu</Label>
+         <!--thẻ file-->
+         <br>
+         <label for="avatar"></label>
+         <input type="file" name="avatar" id="avatar">
+         <!--thẻ màu-->
+         <label for="mausac"></label>
+         <input type="color" name="mausac" id="mausac">
+         <br>
+         <!--NgayThang-->
+         <label for="date">Date</label>
+         <input type="date" name="date" id="date">
+         <br>
+         <label for="datetime-local">Date</label>
+         <input type="datetime-local" name="datetime-local" id="datetime-local">
+         <br>
+         <label for="month">Tháng</label>
+         <input type="month" name="month" id="month">
+         <br>
+         <label for="week">Tuần</label>
+         <input type="week" name="week" id="week">
+         <br>
+         <!--email-->
+         <label for="email">email</label>
+         <input type="email" name="email" id="email" placeholder="Nhâp Email">
+         <br>
+         <label for="number">number</label>
+         <input type="number" name="number" id="number" >
+        <br>
+            <input type="reset" name="reset" id="reset">
+        <br>
+        <select name="diachi" id="diachi">
+
+            <option value="">-----Chọn Địa Chỉ-----</option>
+            <option value="HN">Hà Nội</option>
+            <option value="SG">Sài Gòn</option>
+        </select>
+        <br>
+        <!--Viet Van ban-->
+        <textarea name="" id=""></textarea>
+
+        <br>
+            <label for="range"></label>
+            <input type="range" name="range" id="range" min="100" max="1000" value="1000" >
+        <br>
+        <!--bution-->
+        <input type="button" name="button" id="button" value="Gửi">
+        <input type="button" name="" id="submit" value="Gửi">
+       
+    </form>
+</body>
+</html>
