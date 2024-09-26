@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    nav{
+        background-color: #ccc;
+       
+    }
+    ul{
+        padding: 0px;
+    }
+    ul li{
+        position: relative;
+        /*bỏ thuộc tinh list style*/
+        list-style: none;
+        padding: 0.5rem ;
+    }
+    a{
+        /*bỏ gạch dưới*/
+        text-decoration: none;
+        color: rgb(15, 14, 14);
+        /*lam mờ chạy từ 0-1*/
+        opacity: 0.8;
+        /*trên dưới trái phải 0.5rem*/
+        /*padding: 0.5rem ;
+        /*trên dưới 0.5rem trái phải 0.5rem*/
+        /*padding: 0.5rem 0.5rem;
+        /*trên o.5rem dưới 0.5rem trái phải 0.5rem*/
+        /*padding: 0.5rem 0.5rem  0.5rem ;
+        /*trên o.5rem phải 0.5rem dưới 0.5rem trái0.5rem*/
+        /*padding: 0.5rem 0.5rem  0.5rem 0.5rem  ;*/
+        
+    }
+
+    #menu1>li+li::before{
+
+        content: "";
+        height: 100%;
+        width: 2px;
+        background-color: red;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+    }
+    #menu1{
+        display: flex;
+        
+
+    }
+    
+    #menu2{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 250px;
+        border: solid 1px #ccc;
+       border-top: none;
+       border-bottom-left-radius:4px ;
+       border-bottom-right-radius:4px ;
+       background-color: #ccc;
+    }
+    #menu1>li:hover #menu2{
+        display: block;
+        position: absolute
+    }
+    ul li:hover{
+        background-color: rgb(115, 230, 115);
+    }
+</style>
+<body>
+    <nav>
+       <ul id="menu1">
+        <li><a href="">Trang Chủ</a> </li>
+        <li>
+            <a href="">Khóa Học</a>
+            <ul id="menu2">
+                <li>Lập Trình</li>
+                <li>dữ liệu</li>
+                <li>Wed</li>
+            </ul>
+        </li>
+        <li><a href="">Khóa Học</a> </li>
+        <li><a href="">Dịch Vụ</a></li>
+        <li><a href="">Hỗ Trợ</a> </li>
+        <li><a href="">Liên Hệ</a></li>
+       </ul>
+    </nav>
+</body>
+</html>

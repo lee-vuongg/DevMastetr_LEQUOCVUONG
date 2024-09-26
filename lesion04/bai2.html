@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    /*tag01,02*/
+    section div{
+        background-color: aqua;
+        
+
+    }
+    section p{
+        color: rgb(237, 6, 6);
+        
+
+    }
+    /*tag 01 02 css cả hai*/
+    h2,h3{
+        color: rgb(10, 81, 247);
+        background-color: antiquewhite;
+    }
+
+    /*tag01+02-css cho các thành phần tag02+01  */
+
+    h3+div{
+        background-color: aquamarine;
+    }
+    div+div{
+        border: solid rgb(245, 160, 160) 4px;
+    }
+    /*tag01>02 css cho tag02 là thành phần con của tag 01*/
+    section>h3{
+        border: solid rgb(139, 139, 224) 3px;
+    }
+    section:first-child{
+        color: rgb(52, 71, 216) !important;
+    }
+</style>
+<body>
+    <section>
+        <div>
+            <h2>Tag01 tag02</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, repellat est id itaque, quae mollitia suscipit dolor, quidem consequatur 
+                eveniet ullam sed quis architecto doloribus recusandae perferendis? Animi, quod harum.</p>
+        </div>
+    </section>
+    <div>
+        <h3> tag 01,tag02</h3>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae totam fugit laborum fugiat architecto repellendus illum, voluptatum ipsa iste veniam
+             voluptates maiores assumenda ipsam, voluptate est consequuntur quibusdam, quisquam iure!
+        </p>
+    </div>
+    <h3>tag01+02</h3>
+    <div>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab vero id blanditiis aliquam, tempora quidem atque porro debitis excepturi, officiis reprehenderit
+         expedita fugit aut ipsum odit non mollitia perferendis ea?</p>
+    </div>
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo aut impedit in officia magnam unde deleniti, excepturi eos sequi dolor quasi 
+            delectus eveniet provident voluptatum inventore, assumenda magni molestias commodi?</p>
+    </div>
+    <section>
+        <h3>tag01>02</h3>
+        <p>nội dung tag 01>02</p>
+        <div>
+              <h3>
+                nội dung tag 01>03
+              </h3> 
+
+        </div>
+    </section>
+</body>
+</html>
