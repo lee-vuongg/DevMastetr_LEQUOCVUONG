@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phiêu đk</title>
+    <style>
+        .b1{
+            border: 1px solid rgb(51, 88, 112);
+            padding: 10px;
+            width: 550px;
+            background-color: rgb(196, 248, 231);
+
+        }
+        .b2{
+            color: red;
+        }
+        .b3{
+            color: rgb(8, 159, 108);
+        }
+    </style>
+</head>
+<body>
+    <div class="b1">
+    <form>
+        <table width="550px"   >
+            <caption> <h2 class="b3">phiếu đăng kí tham gia chương trình khuyến mãi </h2></caption>
+            <tr>
+                <td  width="150px" class="b3"> họ và tên</td>
+                <td> <input type="text" name="usename" id="usename" size="30" ></td>
+            </tr>
+            <tr>
+                <td class="b3"> địa chỉ</td>
+                <td><input type="addresss" name="addresss" id="addresss" size="20"></td>
+            </tr>
+            <tr>
+                <td class="b3"> điện thoại</td>
+                <td> <input type="text" name="call" id="call" width="20"></td>
+            </tr>
+            <tr>
+                <td class="b3"> Phái</td>
+                <td>
+                    <input type="radio" name="gender" id="male" >
+                    <label for=" male"> Nam</label>
+                    <input type="radio" name="gender" id="female">
+                    <label for="female"> Nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="b3"> Nghề nghiệp</td>
+                <td>
+                    <select name="province" id="province">
+                        <option value="">Bác sĩ</option>
+                        <option value="">Giáo viên</option>
+                        <option value="">Kỹ sư</option>
+                        <option value="">Kỹ thuật viên</option>
+                        <option value="">Lập trình</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="b3"> CHọn sản phẩm tham gia</td>
+                <td>
+                    <select name="province" id="province">
+                        <option value="">kem đánh răng</option>
+                        <option value=""></option>bột giặt
+                        <option value="">dầu gội đầu</option>
+                        <option value="">sữa tắm</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="b3"> Số người dự đoán</td>
+                <td>
+                    <textarea name="description" id="description" cols="40" rows="3">250000</textarea>
+                </td>
+            </tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Đồng ý" name="register">
+                <tr>
+                    <td align="center" class="b2"> Bạn đã đăng kí thành công!! >.< </td>
+                </tr>
+               
+        </table>
+    </form>
+</div>  
+</body>
+</html>
