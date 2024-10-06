@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Dãy Số</title>
+</head>
+<body>
+    <pre id="result"></pre>
+
+    <script>
+        const resultElement = document.getElementById("result");
+        let output = "";
+
+        // Số lượng hàng
+        const rows = 10;
+
+        // Vòng lặp để tạo chuỗi số
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j <= i; j++) {
+                output += j; // Thêm số j vào chuỗi
+            }
+            output += "\n"; // Xuống dòng sau mỗi hàng
+        }
+
+        // Hiển thị kết quả
+        resultElement.textContent = output;
+    </script>
+</body>
+</html>

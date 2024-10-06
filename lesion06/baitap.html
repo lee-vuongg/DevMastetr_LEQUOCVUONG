@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function giaiPhuongTrinh() {
+            const a = parseFloat(document.getElementById("a").value);
+            const b = parseFloat(document.getElementById("b").value);
+            const c = parseFloat(document.getElementById("c").value);
+            let ketQua = "";
+
+            if (a === 0) {
+                ketQua = b === 0 ? (c === 0 ? "Vô số nghiệm." : "Vô nghiệm.") : `Nghiệm: x = ${-c / b}`;
+            } else {
+                const delta = b * b - 4 * a * c;
+                if (delta > 0) {
+                    const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                    const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                    ketQua = `Hai nghiệm: x1 = ${x1}, x2 = ${x2}`;
+                } else if (delta === 0) {
+                    const x = -b / (2 * a);
+                    ketQua = `Nghiệm kép: x = ${x}`;
+                } else {
+                    ketQua = "Vô nghiệm.";
+                }
+            }
+
+            document.getElementById("result").innerText = ketQua;
+        }
+    </script>
+     <h1>Giải Phương Trình Bậc 2</h1>
+     <input type="number" id="a" placeholder="Nhập a" required>
+     <input type="number" id="b" placeholder="Nhập b" required>
+     <input type="number" id="c" placeholder="Nhập c" required>
+     <button onclick="giaiPhuongTrinh()">Giải</button>
+ 
+     <h2>Kết quả:</h2>
+     <p id="result"></p>
+</body>
+</html>
