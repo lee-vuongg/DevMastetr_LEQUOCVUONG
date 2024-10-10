@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký Khách hàng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Đăng ký Khách hàng</h2>
+<form id="registrationForm">
+    <label for="name">Họ và tên:</label><br>
+    <input type="text" id="name" required><br>
+    <span class="error" id="nameError"></span><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" required><br>
+    <span class="error" id="emailError"></span><br>
+
+    <label for="password">Mật khẩu:</label><br>
+    <input type="password" id="password" required><br>
+    <span class="error" id="passwordError"></span><br>
+
+    <input type="submit" value="Đăng ký">
+</form>
+
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Ngăn chặn gửi biểu mẫu
+
+        // Lấy giá trị từ các trường
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        // Kiểm tra thông tin
+        let isValid = true;
+
+        // Kiểm tra họ và tên
+        if (name.trim() === '') {
+            document.getElementById('nameError').textContent = 'Vui lòng nhập họ và tên.';
+            isValid = false;
+        } else {
+            document.getElementById('nameError').textContent = '';
+        }
+
+        // Kiểm tra email
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!emailPattern.test(email)) {
+            document.getElementById('emailError').textContent = 'Vui lòng nhập email hợp lệ.';
+            isValid = false;
+        } else {
+            document.getElementById('emailError').textContent = '';
+        }
+
+        // Kiểm tra mật khẩu
+        if (password.length < 6) {
+            document.getElementById('passwordError').textContent = 'Mật khẩu phải có ít nhất 6 ký tự.';
+            isValid = false;
+        } else {
+            document.getElementById('passwordError').textContent = '';
+        }
+
+        // Nếu tất cả các kiểm tra hợp lệ, gửi biểu mẫu
+        if (isValid) {
+            alert('Đăng ký thành công!');
+            // Có thể gửi dữ liệu đến server ở đây
+        }
+    });
+</script>
+
+</body>
+</html>
