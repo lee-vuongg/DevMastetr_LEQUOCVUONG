@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Kí Thông Tin Người Dùng</title>
+</head>
+<style>
+    .error{
+        color: red;
+        display: none;
+    }
+</style>
+<body>
+    <form action="post" name="frm">
+        <div>
+            <label for="hoVaTen">Ho va Ten</label>
+            <input type="text" name="hoVaTen" id="hoVaTen">
+            <p id="err-ho-va-ten" class="error">
+                Vui Long Khong De Trong
+            </p>
+        </div>
+        <div>
+            <label for="email">email</label>
+            <input type="text" name="email" id="email">
+            <p id="err-email" class="error">
+                Vui Long Khong De Trong
+            </p>
+        </div>
+        <div>
+            <label for="passwork">Mat Khau</label>
+            <input type="password" name="password" id="password">
+            <input type="checkbox" name="showPass" id="showPass">
+            <p id="err-password" class="error">
+                Vui Long Khong De Trong
+            </p>
+        </div>
+        <div>
+            <label for="repasswork">repasswork</label>
+            <input type="repasswork" name="repasswork" id="repasswork">
+            <input type="checkbox" name="showPass" id="showPass">
+        </div>
+        <div>
+            <label for="tuoi">Tuoi</label>
+            <input type="number" name="tuoi" id="tuoi">
+            <p id="err-tuoi" class="error">
+                Vui Long Khong De Trong
+            </p>
+
+        </div>
+    </form>
+    <script>
+            document.getElementById("hoVaten").addEventListener('onblur',()=>{
+                if(this.value == || this.value == null){
+                      err.style.display='block'
+
+                }
+                document.getElementById("err-ho-va-ten").style.display='block'
+              
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+I.ngôn Ngữ Jscript
+1.khai báo
+    -Biến,hằng số,mảng,object
+    + var/let/const tên_biến/tên_hằng_số/tên_object;
+    +const tên_hằng_số;
+    -mảng
+    + var/let
+    -object
+
+
+
+
+2.vòng lặp
+
+
+
+3.câu lệnh rẽ nhánh
+
+
+4.object/function
+
+
+
+II.Tt với html

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sản phẩm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .pagination {
+            margin-top: 20px;
+        }
+        .pagination a {
+            margin: 0 5px;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #007bff;
+            color: #007bff;
+        }
+        .pagination a.active {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Danh sách sản phẩm</h1>
+
+<input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm..." onkeyup="filterProducts()">
+
+<ul id="productList">
+    <li data-name="Sản phẩm 1">Sản phẩm 1 - 100.000đ</li>
+    <li data-name="Sản phẩm 2">Sản phẩm 2 - 200.000đ</li>
+    <li data-name="Sản phẩm 3">Sản phẩm 3 - 300.000đ</li>
+    <li data-name="Sản phẩm 4">Sản phẩm 4 - 400.000đ</li>
+    <li data-name="Sản phẩm 5">Sản phẩm 5 - 500.000đ</li>
+    <li data-name="Sản phẩm 6">Sản phẩm 6 - 600.000đ</li>
+    <li data-name="Sản phẩm 7">Sản phẩm 7 - 700.000đ</li>
+    <li data-name="Sản phẩm 8">Sản phẩm 8 - 800.000đ</li>
+    <li data-name="Sản phẩm 9">Sản phẩm 9 - 900.000đ</li>
+    <li data-name="Sản phẩm 10">Sản phẩm 10 - 1.000.000đ</li>
+    <!-- Thêm nhiều sản phẩm hơn nếu cần -->
+</ul>
+
+<div class="pagination" id="pagination"></div>
+
+<script>
+    const productsPerPage = 3;
+    let currentPage = 1;
+
+    function displayProducts() {
+        const productList = document.getElementById('productList');
+        const pagination = document.getElementById('pagination');
+        const items = productList.getElementsByTagName('li');
+        const totalPages = Math.ceil(items.length / productsPerPage);
+
+        // Ẩn tất cả sản phẩm
+        for (let item of items) {
+            item.style.display = 'none';
+        }
+
+        // Tính chỉ số bắt đầu và kết thúc của sản phẩm trên trang hiện tại
+        const start = (currentPage - 1) * productsPerPage;
+        const end = Math.min(start + productsPerPage, items.length);
+
+        // Hiển thị sản phẩm trên trang hiện tại
+        for (let i = start; i < end; i++) {
+            items[i].style.display = 'list-item';
+        }
+
+        // Hiển thị phân trang
+        pagination.innerHTML = '';
+        for (let i = 1; i <= totalPages; i++) {
+            const pageLink = document.createElement('a');
+            pageLink.innerText = i;
+            pageLink.href = '#';
+            pageLink.className = i === currentPage ? 'active' : '';
+            pageLink.onclick = function() {
+                currentPage = i;
+                displayProducts();
+                return false;
+            };
+            pagination.appendChild(pageLink);
+        }
+    }
+
+    function filterProducts() {
+        const searchInput = document.getElementById('searchInput').value.toLowerCase();
+        const productList = document.getElementById('productList');
+        const items = productList.getElementsByTagName('li');
+
+        // Ẩn tất cả sản phẩm
+        for (let item of items) {
+            item.style.display = 'none';
+        }
+
+        // Lọc và hiển thị sản phẩm
+        const filteredItems = Array.from(items).filter(item => {
+            return item.dataset.name.toLowerCase().includes(searchInput);
+        });
+
+        // Hiển thị sản phẩm đã lọc
+        for (let i = 0; i < filteredItems.length; i++) {
+            filteredItems[i].style.display = 'list-item';
+        }
+
+        // Cập nhật phân trang
+        currentPage = 1;
+        displayProducts();
+    }
+
+    // Khởi động hiển thị sản phẩm
+    displayProducts();
+</script>
+
+</body>
+</html>
